@@ -2,8 +2,8 @@
 title: "clustering method: k-means"
 output: html_document
 ---
-
-Purpose of exercise is to segment the customers of a mall using their annual income and spending score (scale from 1-100), using k-means clustering method. The optimal number of clusters (k) is explored with the Elbow, average Silhouetter and Gap statistic methods. Data source: Kaggle dataset (<https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python/activity>).
+Purpose: To segment mall customers by their annual income and spending score using k-means clustering and identify target group for possible intervention(s) to increase their spending score.
+The optimal number of clusters (k) is explored with the Elbow, average Silhouetter and Gap statistic methods. Data source: Kaggle dataset (<https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python/activity>).
 
 #### Load required packages and data
 ```{r, message = FALSE}
