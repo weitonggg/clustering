@@ -69,6 +69,6 @@ ggplot(cust, aes(x = annual_income_000, y = spend_score, colour = factor(cluster
 Interpretation of results:
 Cluster 1: low annual income, low spending score
 Cluster 2: average annual income, average score 
-Cluster 3: high annual income, low score (interventions can be targeted at this group to increase their spending score)
+Cluster 3: high annual income, low score (interventions can be targeted at this group to increase spending score)
 Cluster 4: low annual income, high score
 Cluster 5: high annual income, high score
