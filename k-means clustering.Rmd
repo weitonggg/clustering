@@ -10,6 +10,7 @@ The optimal number of clusters (k) is explored with the Elbow, average Silhouett
 library(ggplot2)
 library(dplyr)
 library(cluster)
+library(factoextra)
 
 cust <- read.csv("data.csv")
 colnames(cust) <- c("cust_id", "gender", "age", "annual_income_000", "spend_score")
