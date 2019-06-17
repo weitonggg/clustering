@@ -1,5 +1,6 @@
 # compare clusters formed using kmeans and hierarchical
 table("km clusters" = cust$km_clusters, "hc clusters" = cust$hc_clusters)
+
 cust %>% 
   group_by(km_clusters) %>% 
   summarise(avg_score = mean(spend_score), avg_income = mean(annual_income_000))
