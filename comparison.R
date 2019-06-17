@@ -1,3 +1,6 @@
+library(dplyr)
+library(ggplot2)
+
 # compare clusters formed using kmeans and hierarchical
 table("km clusters" = cust$km_clusters, "hc clusters" = cust$hc_clusters)
 
