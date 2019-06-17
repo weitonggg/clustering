@@ -20,21 +20,3 @@ plot(hclust_avg)
 rect.hclust(hclust_avg, k = 5)
 
 cust <- mutate(cust, hc_clusters = cut_avg)
-
-# (average = average distance between 2 clusters)
-# complete-linkage: maximum distance between clusters
-# single-linkage: minimum distance between clusters (may be used to detect outliers)
-# centroid-linkage: finds centroid in clusters and distance between 2 centroids before merging
-
-
-library(cluster)
-cust_pam <- pam(scaled_cust,k=4)
-plot(cust_pam)
-
-# choose method of linkage depending on purpose of clustering
-# complete & average = more commonly used and produced more balanced trees
-# single are used for detecting outliers (unbalanced tree)
-
-# scale data before using clustering algo (normalisation)
-colMeans(x)
-apply(x, 2 ,sd)
