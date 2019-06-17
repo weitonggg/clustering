@@ -1,4 +1,4 @@
-##### Clustering method: k-means cluster
+##### Clustering method: k-means clustering & hierarchical clustering
 
 Data downloaded from https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python/activity
 
