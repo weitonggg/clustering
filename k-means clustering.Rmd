@@ -2,14 +2,15 @@
 title: "clustering method: k-means"
 output: html_document
 ---
-
-Purpose of exercise is to segment the customers of a mall using their annual income and spending score (scale from 1-100), using k-means clustering method. The optimal number of clusters (k) is explored with the Elbow, average Silhouetter and Gap statistic methods. Data source: Kaggle dataset (<https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python/activity>).
+Purpose: To segment mall customers by their annual income and spending score using k-means clustering and identify target group for possible intervention(s) to increase their spending score.
+The optimal number of clusters (k) is explored with the Elbow, average Silhouette and Gap statistic methods. Data source: Kaggle dataset (<https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python/activity>).
 
 #### Load required packages and data
 ```{r, message = FALSE}
 library(ggplot2)
 library(dplyr)
 library(cluster)
+library(factoextra)
 
 cust <- read.csv("data.csv")
 colnames(cust) <- c("cust_id", "gender", "age", "annual_income_000", "spend_score")
@@ -68,6 +69,6 @@ ggplot(cust, aes(x = annual_income_000, y = spend_score, colour = factor(cluster
 Interpretation of results:
 Cluster 1: low annual income, low spending score
 Cluster 2: average annual income, average score 
-Cluster 3: high annual income, low score (interventions can be targeted at this group to increase their spending score)
+Cluster 3: high annual income, low score (interventions can be targeted at this group to increase spending score)
 Cluster 4: low annual income, high score
 Cluster 5: high annual income, high score

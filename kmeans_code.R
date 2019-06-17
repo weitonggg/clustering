@@ -54,15 +54,3 @@ set.seed(100)
 km_clust <- kmeans(scaled_cust, centers = 5, nstart = 25)
 #cluster_5$tot.withinss
 cust <- cust %>% mutate(km_clusters = km_clust$cluster)
-ggplot(cust, aes(x = annual_income_000, y = spend_score, colour = factor(km_clusters))) +
-  geom_point() +
-  scale_color_discrete(name = "Clusters") +
-  xlab("Annual income of customers (thousands)") +
-  ylab("Spending score")
-
-# Interpretation of plot:
-# cluster 1: low annual income, low spending score,
-# cluster 2: average annual income, average score * target for promotions to retain
-# cluster 3: high annual income, low score* target to increase spending of this grp
-# cluster 4: low annual income, high score* loyal custs, target with discounts and promotions
-# cluster 5: high annual income, high score
